@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  background: #f7e977;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #e8791f;
+  text-shadow: 2px 2px #fff, 4px 4px #0003;
+  margin-top: 2rem;
+  letter-spacing: 1.5px;
+  font-size: 2.5rem;
+}
+
+.soundboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+.sound-tile {
+  background: #ffeabf;
+  border: 3px solid #e8791f;
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 #e8791f;
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.sound-tile:hover {
+  transform: rotate(-2deg) scale(1.04);
+  background: #fff7d1;
+}
+
+.sound-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #413c9c;
+  margin-bottom: 1em;
+  text-shadow: 0 1px 0 #ffe, 1px 0 #fff, 2px 2px #fffa;
+}
+
+.sound-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+.sound-actions button,
+.sound-actions a {
+  font: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  background: #e8791f;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5em 1em;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 1px 1px 0 #b34c00;
+  text-decoration: none;
+}
+
+.sound-actions button:hover,
+.sound-actions a:hover {
+  background: #c75707;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em 0 0.8em;
+  font-size: 1em;
+  opacity: 0.8;
+  background: none;
+}
+
+@media (max-width: 600px) {
+  .soundboard {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
